@@ -1,9 +1,9 @@
-Reproducer for a [Renovate looping bug](TODO).
+Reproducer for a [Renovate looping bug](https://github.com/renovatebot/renovate/discussions/35524).
 
 I assume the following enrironment variables have been exported with appropriate values:
 ```
 RENOVATE_PLATFORM=github
-RENOVATE_REPOSITORY=<username>/renovate-looping-reproducer
+RENOVATE_REPOSITORY=<username>/renovate-35524-reproducer
 RENOVATE_TOKEN=<...>
 ```
 
