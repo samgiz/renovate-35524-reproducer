@@ -9,7 +9,7 @@ importers:
   .:
     devDependencies:
       '@tauri-apps/cli':
-        specifier: ^2.4.0
+        specifier: 2.4.0
         version: 2.4.0
 
 packages:
