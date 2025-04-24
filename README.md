@@ -1,6 +1,6 @@
 Reproducer for a [Renovate looping bug](https://github.com/renovatebot/renovate/discussions/35524).
 
-I assume the following enrironment variables have been exported with appropriate values:
+I assume the following environment variables have been exported with appropriate values:
 ```
 RENOVATE_PLATFORM=github
 RENOVATE_REPOSITORY=<username>/renovate-35524-reproducer
