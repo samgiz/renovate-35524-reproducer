@@ -10,7 +10,7 @@ RENOVATE_TOKEN=<...>
 To reproduce the bug, fork this repo and then run the following **once**:
 
 ```
-RENOVATE_CONFIG={"extends":[":pinDevDependencies"]} renovate
+RENOVATE_CONFIG="{\"extends\":[\":pinDevDependencies\"]}" renovate
 ```
 
 Renovate creates the PR to pin the dev dependency first and then the `tauri-monorepo` PR without the pnpm dependency. This is not the only way to achieve the bug (and not one you are likely to see normally), but it seems to be reproducible behaviour.
