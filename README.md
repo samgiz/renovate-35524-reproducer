@@ -10,10 +10,10 @@ RENOVATE_TOKEN=<...>
 To reproduce the bug, fork this repo and then run the following **once**:
 
 ```
-RENOVATE_CONFIG="{\"extends\":[\":pinDevDependencies\"]}" renovate
+RENOAVTE_CONFIG="{\"packageRules\":[{\"matchPackageNames\":[\"@tauri-apps/cli\"],\"allowedVersions\":\"<=2.4.0\"}]}" renovate
 ```
 
-Renovate creates the PR to pin the dev dependency first and then the `tauri-monorepo` PR without the pnpm dependency. This is not the only way to achieve the bug (and not one you are likely to see normally), but it seems to be reproducible behaviour.
+This will make sure that `@tauri-apps/cli` does not get included in the initial Renovate PR.
 
 Then on the following runs use renovate without the additional config:
 
@@ -21,4 +21,4 @@ Then on the following runs use renovate without the additional config:
 renovate
 ```
 
-This will close the dependency pinning PR and group all the dependencies in the `tauri-monorepo` PR. Observe how the `tauri-monorepo` PR alternates between having only pnpm or only cargo updates.
+Observe how the `tauri-monorepo` PR alternates between having only pnpm or only cargo updates.
